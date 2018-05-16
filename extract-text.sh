@@ -23,7 +23,7 @@ echo "Compiling by language"
 
 echo "Compiling by error type"
 cat $outdir/*-with-tags >/tmp/extract-text-all-errs
-trash $outdir/byerr-*
+#trash $outdir/byerr-*
 while read line; do
     echo $line | grep -o 'type="[A-Z]*"' | grep -o '[A-Z][A-Z]*' >/tmp/extract-text-err-types
     while read error; do
