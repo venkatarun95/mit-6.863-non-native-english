@@ -201,7 +201,7 @@ if __name__ == "__main__":
                     print(errs)
                     num_not_found += 1
             else:
-                print("Found '%s' error" % gnd_err[0])
+                print("Found '%s' error at %d" % (gnd_err[0], gnd_err[1]))
                 print(orig_line)
                 print(' '.join(line_toks[gnd_err[1]-2:gnd_err[1]+2]))
                 num_found += 1
@@ -214,7 +214,6 @@ if __name__ == "__main__":
             print(errs)
             for e in errs:
                 print(' '.join(line_toks[e[1]-2:e[2]+2]))
-            print(orig_line)
             num_extraneous += 1
 
     f.close()
